@@ -296,95 +296,201 @@
                 transform: scale(1.2);
             }
         }
-@media (max-width: 768px) {
-    /* General Adjustments */
-    body {
-        margin : 0 ;
-        padding: 15px;
-    }
-    
-    .container {
-        width: 95%;
-        padding: 25px 15px;
-        margin: 0;
-    }
-    
-    /* Text Sizes */
-    h1 {
-        font-size: 2.2rem !important;
-        margin-bottom: 15px !important;
-    }
-    
-    .arabic {
-        font-size: 1.8rem !important;
-        margin: 15px 0 !important;
-    }
-    
-    .message {
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-    }
-    
-    /* Moons */
-    .moons {
-        height: 200px;
-        top: -50px;
-    }
-    
-    .moon {
-        width: 70px !important;
-        height: 70px !important;
-        box-shadow: 10px 10px 0 #FFD700 !important;
-    }
-    
-    .moon:nth-child(1) {
-        top: 30px !important;
-        right: 10% !important;
-    }
-    
-    .moon:nth-child(2) {
-        top: 80px !important;
-        right: 40% !important;
-    }
-    
-    .moon:nth-child(3) {
-        top: 20px !important;
-        right: 70% !important;
-    }
-    
-    /* Lanterns */
-    .lanterns {
-        margin: 25px 0 !important;
-    }
-    
-    .lantern {
-        width: 50px !important;
-        height: 70px !important;
-    }
-    
-    .lantern::before {
-        right: 15px !important;
-        width: 15px !important;
-    }
-    
-    .lantern::after {
-        right: 17px !important;
-        font-size: 1.2rem !important;
-    }
-    
-    /* Button */
-    .btn {
-        padding: 12px 25px !important;
-        font-size: 1rem !important;
-    }
-    
-    /* Footer */
-    .footer {
-        margin-top: 25px !important;
-        font-size: 0.8rem !important;
-    }
-}
+
+        /* Share Modal Styles */
+        .share-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .share-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .share-title {
+            color: #1a3a5a;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .share-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .share-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            width: 80px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .share-btn i {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .share-btn span {
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        .close-share {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+
+            /* General Adjustments */
+            body {
+                padding: 0 !important;
+                /* Remove all padding */
+            }
+
+            .container {
+                width: 100% !important;
+                /* Full width */
+                margin: 0 !important;
+                /* Remove all margins */
+                border-radius: 0 !important;
+                /* Optional: Remove rounded corners */
+            }
+
+            /* Text Sizes */
+            h1 {
+                font-size: 2.2rem !important;
+                margin-bottom: 15px !important;
+            }
+
+            .arabic {
+                font-size: 1.8rem !important;
+                margin: 15px 0 !important;
+            }
+
+            .message {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+
+            /* Moons */
+            .moons {
+                height: 200px;
+                top: -50px;
+            }
+
+            .moon {
+                width: 70px !important;
+                height: 70px !important;
+                box-shadow: 10px 10px 0 #FFD700 !important;
+            }
+
+            .moon:nth-child(1) {
+                top: 30px !important;
+                right: 10% !important;
+            }
+
+            .moon:nth-child(2) {
+                top: 80px !important;
+                right: 40% !important;
+            }
+
+            .moon:nth-child(3) {
+                top: 20px !important;
+                right: 70% !important;
+            }
+
+            /* Lanterns */
+            .lanterns {
+                margin: 25px 0 !important;
+            }
+
+            .lantern {
+                width: 50px !important;
+                height: 70px !important;
+            }
+
+            .lantern::before {
+                right: 15px !important;
+                width: 15px !important;
+            }
+
+            .lantern::after {
+                right: 17px !important;
+                font-size: 1.2rem !important;
+            }
+
+            /* Button */
+            .btn {
+                padding: 12px 25px !important;
+                font-size: 1rem !important;
+            }
+
+            /* Footer */
+            .footer {
+                margin-top: 25px !important;
+                font-size: 0.8rem !important;
+            }
+
+            /* Share Modal */
+            .share-content {
+                padding: 20px;
+                width: 95%;
+            }
+
+            .share-title {
+                font-size: 1.3rem;
+            }
+
+            .share-options {
+                gap: 10px;
+            }
+
+            .share-btn {
+                width: 70px;
+                padding: 10px;
+            }
+
+            .share-btn i {
+                font-size: 1.5rem;
+            }
+        }
     </style>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -416,10 +522,44 @@
             الله أقرب.
         </p>
 
-        <a href="#" class="btn">إرسال التهاني</a>
+        <button id="shareBtn" class="btn">مشاركة التهنئة</button>
 
         <div class="footer">
             <p>بأطيب الأمنيات في هذه المناسبة السعيدة</p>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="share-modal">
+        <div class="share-content">
+            <span class="close-share">&times;</span>
+            <h3 class="share-title">اختر طريقة المشاركة</h3>
+            <div class="share-options">
+                <button class="share-btn" onclick="shareVia('whatsapp')">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    <span>واتساب</span>
+                </button>
+                <button class="share-btn" onclick="shareVia('messenger')">
+                    <i class="fab fa-facebook-messenger" style="color: #006AFF;"></i>
+                    <span>مسنجر</span>
+                </button>
+                <button class="share-btn" onclick="shareVia('twitter')">
+                    <i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+                    <span>تويتر</span>
+                </button>
+                <button class="share-btn" onclick="shareVia('telegram')">
+                    <i class="fab fa-telegram" style="color: #0088cc;"></i>
+                    <span>تلغرام</span>
+                </button>
+                <button class="share-btn" onclick="shareVia('sms')">
+                    <i class="fas fa-sms" style="color: #34B7F1;"></i>
+                    <span>رسالة</span>
+                </button>
+                <button class="share-btn" onclick="shareVia('system')">
+                    <i class="fas fa-share-alt" style="color: #555;"></i>
+                    <span>نسخ</span>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -443,7 +583,7 @@
 
             // Random animation
             star.style.animationDelay = `${Math.random() * 3}s`;
-            star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+            star.style.animationDإلىuration = `${Math.random() * 2 + 1}s`;
 
             starsContainer.appendChild(star);
         }
@@ -459,6 +599,69 @@
                 }
             </style>
         `);
+
+        // Share functionality
+        const shareBtn = document.getElementById('shareBtn');
+        const shareModal = document.getElementById('shareModal');
+        const closeShare = document.querySelector('.close-share');
+
+        shareBtn.addEventListener('click', () => {
+            shareModal.style.display = 'flex';
+        });
+
+        closeShare.addEventListener('click', () => {
+            shareModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === shareModal) {
+                shareModal.style.display = 'none';
+            }
+        });
+
+        function shareVia(method) {
+            const url = window.location.href;
+            const text = "تهنئة بعيد الفطر المبارك - كل عام وأنتم بخير!";
+
+            switch (method) {
+                case 'whatsapp':
+                    window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + url)}`, '_blank');
+                    break;
+                case 'messenger':  // New Messenger case
+                    window.open(`fb-messenger://share/?link=${encodeURIComponent(url)}`, '_blank');
+                    break;
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+                    break;
+                case 'telegram':
+                    window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+                    break;
+                case 'sms':
+                    window.open(`sms:?body=${encodeURIComponent(text + '\n' + url)}`, '_blank');
+                    break;
+                case 'system':
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'تهنئة عيد الفطر',
+                            text: text,
+                            url: url
+                        }).catch(console.error);
+                    } else {
+                        // Fallback for browsers without Web Share API
+                        const textarea = document.createElement('textarea');
+                        textarea.value = `${text}\n${url}`;
+                        document.body.appendChild(textarea);
+                        textarea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textarea);
+                        alert('تم نسخ الرابط  !');
+                    }
+                    break;
+            }
+
+            shareModal.style.display = 'none';
+        }
     </script>
 </body>
 
