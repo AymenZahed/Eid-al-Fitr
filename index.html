@@ -296,35 +296,93 @@
                 transform: scale(1.2);
             }
         }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .arabic {
-                font-size: 1.8rem;
-            }
-
-            .message {
-                font-size: 1rem;
-            }
-
-            .lantern {
-                width: 50px;
-                height: 70px;
-            }
-
-            .moon {
-                width: 80px;
-                height: 80px;
-                box-shadow: 15px 15px 0 #FFD700;
-            }
-        }
+@media (max-width: 768px) {
+    /* General Adjustments */
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 25px 15px;
+        margin: 15px 0;
+    }
+    
+    /* Text Sizes */
+    h1 {
+        font-size: 2.2rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .arabic {
+        font-size: 1.8rem !important;
+        margin: 15px 0 !important;
+    }
+    
+    .message {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* Moons */
+    .moons {
+        height: 200px;
+        top: -50px;
+    }
+    
+    .moon {
+        width: 70px !important;
+        height: 70px !important;
+        box-shadow: 10px 10px 0 #FFD700 !important;
+    }
+    
+    .moon:nth-child(1) {
+        top: 30px !important;
+        right: 10% !important;
+    }
+    
+    .moon:nth-child(2) {
+        top: 80px !important;
+        right: 40% !important;
+    }
+    
+    .moon:nth-child(3) {
+        top: 20px !important;
+        right: 70% !important;
+    }
+    
+    /* Lanterns */
+    .lanterns {
+        margin: 25px 0 !important;
+    }
+    
+    .lantern {
+        width: 50px !important;
+        height: 70px !important;
+    }
+    
+    .lantern::before {
+        right: 15px !important;
+        width: 15px !important;
+    }
+    
+    .lantern::after {
+        right: 17px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    /* Button */
+    .btn {
+        padding: 12px 25px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Footer */
+    .footer {
+        margin-top: 25px !important;
+        font-size: 0.8rem !important;
+    }
+}
     </style>
 </head>
 
