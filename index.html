@@ -12,7 +12,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
         }
 
         body {
@@ -372,120 +371,114 @@
             cursor: pointer;
         }
 
-        /* Mobile Optimizations */
         @media (max-width: 768px) {
 
-            /* General Adjustments */
+            /* Reset root margins and padding */
+            html,
             body {
+                margin: 0 !important;
                 padding: 0 !important;
-                /* Remove all padding */
+                overflow-x: hidden;
+                width: 100%;
             }
 
+            /* Full-width container adjustments */
             .container {
                 width: 100% !important;
-                /* Full width */
+                max-width: 100% !important;
                 margin: 0 !important;
-                /* Remove all margins */
+                padding: 20px 15px !important;
                 border-radius: 0 !important;
-                /* Optional: Remove rounded corners */
+                border: none !important;
             }
 
-            /* Text Sizes */
-            h1 {
-                font-size: 2.2rem !important;
+            /* Header and text adjustments */
+            .header {
                 margin-bottom: 15px !important;
             }
 
+            h1 {
+                font-size: 2rem !important;
+                margin-bottom: 10px !important;
+            }
+
             .arabic {
-                font-size: 1.8rem !important;
-                margin: 15px 0 !important;
+                font-size: 1.5rem !important;
+                margin: 10px 0 !important;
             }
 
             .message {
                 font-size: 1rem !important;
-                line-height: 1.6 !important;
+                margin-bottom: 20px !important;
             }
 
-            /* Moons */
+            /* Moon positioning fixes */
             .moons {
-                height: 200px;
-                top: -50px;
+                width: 110% !important;
+                right: -5% !important;
+                top: -30px !important;
+                height: 180px !important;
             }
 
             .moon {
-                width: 70px !important;
-                height: 70px !important;
+                width: 60px !important;
+                height: 60px !important;
                 box-shadow: 10px 10px 0 #FFD700 !important;
             }
 
             .moon:nth-child(1) {
-                top: 30px !important;
-                right: 10% !important;
+                right: 5% !important;
+                top: 20px !important;
             }
 
             .moon:nth-child(2) {
-                top: 80px !important;
                 right: 40% !important;
+                top: 60px !important;
             }
 
             .moon:nth-child(3) {
-                top: 20px !important;
-                right: 70% !important;
+                right: 75% !important;
+                top: 10px !important;
             }
 
-            /* Lanterns */
+            /* Lantern adjustments */
             .lanterns {
-                margin: 25px 0 !important;
+                margin: 15px 0 !important;
             }
 
             .lantern {
-                width: 50px !important;
-                height: 70px !important;
+                width: 45px !important;
+                height: 65px !important;
             }
 
             .lantern::before {
-                right: 15px !important;
-                width: 15px !important;
+                right: 12px !important;
+                width: 12px !important;
             }
 
             .lantern::after {
-                right: 17px !important;
-                font-size: 1.2rem !important;
-            }
-
-            /* Button */
-            .btn {
-                padding: 12px 25px !important;
+                right: 14px !important;
                 font-size: 1rem !important;
             }
 
-            /* Footer */
+            /* Button adjustments */
+            .btn {
+                padding: 12px 25px !important;
+                font-size: 1rem !important;
+                margin-top: 15px !important;
+            }
+
+            /* Footer fixes */
             .footer {
-                margin-top: 25px !important;
+                margin: 15px 0 0 0 !important;
+                padding-bottom: 10px !important;
                 font-size: 0.8rem !important;
             }
 
-            /* Share Modal */
-            .share-content {
-                padding: 20px;
-                width: 95%;
-            }
-
-            .share-title {
-                font-size: 1.3rem;
-            }
-
-            .share-options {
-                gap: 10px;
-            }
-
-            .share-btn {
-                width: 70px;
-                padding: 10px;
-            }
-
-            .share-btn i {
-                font-size: 1.5rem;
+            /* Star field adjustment */
+            .stars {
+                width: 110% !important;
+                right: -5% !important;
             }
         }
     </style>
